@@ -30,7 +30,7 @@ describe('Login Controller', function () {
         .post('/login')
         .send({ 
             username: 'admin', 
-            password: 'wrong' 
+            password: '000' 
         });
     
     expect(res.status).to.equal(401);
