@@ -1,3 +1,4 @@
+
 # Login API
 
 API simples de login com Express, separando camadas de Controller, Service e Model. Documentação disponível via Swagger.
@@ -14,7 +15,7 @@ API simples de login com Express, separando camadas de Controller, Service e Mod
 
 - Para rodar o servidor:
   ```bash
-  node src/server.js
+  npm start
   ```
 - Acesse a documentação Swagger em: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
@@ -31,11 +32,16 @@ API simples de login com Express, separando camadas de Controller, Service e Mod
 
 ## Testes Automatizados
 
-- Os testes utilizam Jest e Supertest.
+- Os testes utilizam Mocha, Chai, Sinon e SuperTest.
 - Para rodar os testes:
   ```bash
   npm test
   ```
+
+## Integração Contínua (CI)
+
+O projeto está configurado com GitHub Actions para rodar os testes automaticamente a cada push ou pull request na branch `main`.
+O workflow está em `.github/workflows/nodejs.yml`.
 
 ## Exemplo de Requisição
 
@@ -50,4 +56,4 @@ Content-Type: application/json
 
 ## Notas
 - O endpoint `/api-docs` exibe a documentação Swagger.
-- O app pode ser importado separadamente para testes (Supertest).
+- O app pode ser importado separadamente para testes (SuperTest).

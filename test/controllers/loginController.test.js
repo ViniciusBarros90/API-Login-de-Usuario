@@ -15,10 +15,10 @@ describe('Login Controller', function () {
 
   it('deve retornar 400 se username ou password não forem enviados', async function () {
     const res = await request(app)
-        .post('/login')
-        .send({ 
-            username: 'admin' 
-        });
+      .post('/login')
+      .send({ 
+        username: 'admin' 
+      });
     
     expect(res.status).to.equal(400);
     expect(res.body.message).to.equal('Username and password are required.');
@@ -27,11 +27,11 @@ describe('Login Controller', function () {
   it('deve retornar 401 se as credenciais forem inválidas', async function () {
     authenticateServiceMock = sinon.stub(loginService, 'authenticate').returns(null);
     const res = await request(app)
-        .post('/login')
-        .send({ 
-            username: 'admin', 
-            password: '000' 
-        });
+      .post('/login')
+      .send({ 
+        username: 'admin', 
+        password: '000' 
+      });
     
     expect(res.status).to.equal(401);
     expect(res.body.message).to.equal('Invalid credentials');
@@ -40,15 +40,14 @@ describe('Login Controller', function () {
   it('deve retornar 200 e o usuário se as credenciais forem válidas', async function () {
     authenticateServiceMock = sinon.stub(loginService, 'authenticate').returns({ id: 1, username: 'admin' });
     const res = await request(app)
-    .post('/login')
-    .send({ 
+      .post('/login')
+      .send({ 
         username: 'admin', password: 'admin123' });
     expect(res.status).to.equal(200);
     expect(res.body.user).to.deep.equal({ id: 1, username: 'admin' });
   });
 
   it('deve chamar o service com os parâmetros corretos', async function () {
-    
     const res = await request(app)
       .post('/login')
       .send({ username: 'admin', password: 'admin123' });
