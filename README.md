@@ -1,7 +1,38 @@
 
 # Login API
 
-API simples de login com Express, separando camadas de Controller, Service e Model. Documentação disponível via Swagger.
+Criei esta API simples de login com Express, separando camadas de Controller, Service e Model. Documentação disponível via Swagger.
+
+A aplicação inclui:
+
+✅ Execução de testes automatizados
+
+✅ Cobertura de testes via app e mock
+
+✅ Simulações com Sinon
+
+✅ Integração com pipeline (CI/CD)
+
+🔧 **Tecnologias e Ferramentas Utilizadas**
+
+Node.js + Express
+
+Arquitetura em camadas (Controller, Service, Model)
+
+Mocha (test runner)
+
+Chai (assertions)
+
+Sinon (mocks e spies)
+
+Supertest (testes de endpoints HTTP)
+
+Padrões de teste:
+
+Testes unitários com mock
+
+Testes de integração com app
+
 
 ## Instalação
 
