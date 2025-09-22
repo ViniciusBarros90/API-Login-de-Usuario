@@ -1,7 +1,7 @@
 
 # Login API
 
-Criei esta API simples de login com Express, separando camadas de Controller, Service e Model. Documentação disponível via Swagger.
+Criei esta API REST simples de login com Express, separando camadas de Controller, Service e Model. Documentação disponível via Swagger.
 
 A aplicação inclui:
 
